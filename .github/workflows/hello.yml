@@ -14,5 +14,5 @@ jobs:
           echo "Hola esto es el mensaje"
       - name : Decime la fecha
         run: date
-      - run: ls- l
+      - run: ls -l
         
