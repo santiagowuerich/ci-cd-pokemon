@@ -1,3 +1,8 @@
+node_modules/
+dist/
+public/
+coverage/
+*.log
 webpack.config.js
 node_modules/
 dist/
