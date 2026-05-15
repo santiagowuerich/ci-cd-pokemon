@@ -17,7 +17,7 @@ jobs:
           # pin Node to 18 for compatibility with repo dependencies
           node-version: '18'
       - name: Install dependencies
-        run: npm install --no-audit --no-found --no-optional
+        run: npm ci --no-audit --no-fund --no-optional
       - name: Linter the code
         run: npm run eslint
       - name: Run built
@@ -27,6 +27,6 @@ jobs:
       - name: EndToEnd tests
         uses: cypress-io/github-action@v4
         with:
-          run: npm run test:e2e
+          command: npm run test:e2e
           start: npm run start-test
           wait-on: 'http://localhost:8080'
