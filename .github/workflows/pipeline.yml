@@ -23,3 +23,11 @@ jobs:
         run: npm run build
       - name: Run tests
         run: npm test
+      - name: EndToEnd tests
+        uses : cypress-io/github-action@v2
+        with:
+          build: npm run start-prod
+          with:
+            run: npm run test:e2e
+            start: npm run start-test
+            wait-on: 'http://localhost:8080'
