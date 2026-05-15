@@ -1,4 +1,4 @@
-
+/* global cy */
 
 describe('Pokedex App', () => {
     it('should display the pokemon list', () => {
