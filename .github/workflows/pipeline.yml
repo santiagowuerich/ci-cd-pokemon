@@ -26,8 +26,6 @@ jobs:
       - name: EndToEnd tests
         uses : cypress-io/github-action@v2
         with:
-          build: npm run start-test
-          with:
-            run: npm run test:e2e
-            start: npm run start-test
-            wait-on: 'http://localhost:8080'
+          run: npm run test:e2e
+          start: npm run start-test
+          wait-on: 'http://localhost:8080'
